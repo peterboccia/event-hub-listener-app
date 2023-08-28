@@ -363,4 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 
 #project-specific file
-.history
+*.history
+/EventHubTestApp/.history
