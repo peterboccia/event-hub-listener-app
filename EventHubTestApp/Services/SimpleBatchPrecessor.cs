@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Windows.UI.Notifications;
 
-namespace CIAM.DataProviders.EventHubs.Processors
+namespace EventHubTestApp.Services
 {
     internal class SimpleBatchPrecessor : PluggableCheckpointStoreEventProcessor<EventProcessorPartition>
     {

@@ -1,0 +1,7 @@
+﻿{
+  "CheckpointConnectionString": "",
+  "CheckpointContainerName": "",
+  "EventHubConnectionString": "",
+  "EventHubConsumerGroup": "",
+  "EventHubName": ""
+}

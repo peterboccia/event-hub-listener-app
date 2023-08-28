@@ -1,5 +1,4 @@
 ﻿using EventHubTestApp.Services;
-using EventHubTester;
 using System;
 using System.Diagnostics;
 using System.IO;

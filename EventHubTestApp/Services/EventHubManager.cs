@@ -1,11 +1,10 @@
 ﻿using Azure.Messaging.EventHubs.Primitives;
 using Azure.Storage.Blobs;
-using CIAM.DataProviders.EventHubs.Processors;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace EventHubTester
+namespace EventHubTestApp.Services
 {
     public static class EventHubManager
     {
