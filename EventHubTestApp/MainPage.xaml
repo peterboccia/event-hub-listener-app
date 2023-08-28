@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="EventHubTestApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EventHubTestApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="32" />
+            <RowDefinition Height="32" />
+            <RowDefinition Height="32" />
+            <RowDefinition Height="32" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Text="Event Hub Connection string"  />
+        <TextBox   Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" x:Name="eventHubConnectionString" />
+        <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Text="Event Hub Name"  />
+        <TextBox   Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" x:Name="eventHubName" />
+        <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Text="Event Hub Consumer Group"  />
+        <TextBox   Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" x:Name="eventHubConsumerGroup" />
+
+        <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Text="Blob Storage connection (snapshot)"  />
+        <TextBox   Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" x:Name="blobStorageConnectionString" />
+        <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Text="Blob Storage Container (snapshot)"  />
+        <TextBox   Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" x:Name="blobStorageContainerName" />
+
+        <ScrollViewer  x:Name="Scroller" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="OutputTextBlock" VerticalAlignment="Top" HorizontalAlignment="Left" TextWrapping="Wrap" FontFamily="Courier New" FontSize="14" />
+        </ScrollViewer>
+
+        <Button x:Name="btnStart" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Row="6" Grid.Column="0" Click="btnStart_Click">Start listener</Button>
+        <Button x:Name="btnStop"  HorizontalAlignment="Left"  Margin="10,0,0,0" Grid.Row="6" Grid.Column="1" Click="btnStop_Click" IsEnabled="False">Stop listener</Button>
+    </Grid>
+</Page>
